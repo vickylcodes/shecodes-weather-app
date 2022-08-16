@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Vicky's Weather App.io</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/weather.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Vicky's Weather App.io
+      </h1>
+      <br />
+      <img src="images/weather-app-icon.svg" alt="" />
+      <h2>
+        It is currently 23°C in Brisbane.
+      </h2>
+      <h3>
+        22 JULY 2022 / 2.22PM AEST
+      </h3>
+      <h4>
+        What is today's temperature in
+        <form class="search-form" id="search-form">
+        <input
+          type="search"
+          placeholder="insert city"
+          autofocus="on"
+          autocomplete="off"
+          id="city-input"
+          size="6"
+        />
+        ?
+        <button id="search-button" type="button" class="btn btn-outline-info">
+          Search
+          <i class="fas fa-search"></i>
+        </button>
+
+        <button id="current-location-button" type="button" class="btn btn-outline-primary">
+          Current
+          <i class="fas fa-search"></i>
+        </button>
+      </h4>
+      <h5>It is 
+        <span class="temperature" id="temperature"> 16 </span>
+        <span class="units">
+            <a href="#" id="celsius-link">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a>   
+        in <span id="city"> Sydney </span>!
+  <br> 
+   <span id="description"> Sunny </span>  
+  </ br>
+  </h5>
+        <p>
+        Precipitation: 0%
+        <br />
+        Humidity: <span id="humidity">10 </span>%
+        <br />
+        Wind: <span id="wind"> 10 </span> km/hr
+      </p>
+      <hr />
+      <h6>
+        The forecast for the next 5 days is:
+      </h6>
+      <br />
+      <section>
+        <div class="row">
+          <div class="col-xs-2">
+            <div class="Monday">
+              <strong> MON </strong>
+              <br />
+              ☀
+              <br />
+              <div class="mon-weather">
+                11°C/20°C
+              </div>
+              <div class="Monday-paragraph">
+                Precipitation: 0% <br />
+                Humidity: 60% <br />
+                Wind: 8 km/h
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-2 col-half-offset">
+            <div class="Tuesday">
+              <strong> TUES </strong>
+              <br />
+              🌧
+              <br />
+              <div class="tues-weather">
+                9°C/18°C
+              </div>
+              <div class="Tuesday-paragraph">
+                Precipitation: 80% <br />
+                Humidity: 70% <br />
+                Wind: 10 km/h
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-2 col-half-offset">
+            <div class="Wednesday">
+              <strong> WED </strong>
+              <br />
+              🍃
+              <br />
+              <div class="wed-weather">
+                13°C/21°C
+              </div>
+              <div class="Wednesday-paragraph">
+                Precipitation: 0% <br />
+                Humidity: 10% <br />
+                Wind: 9 km/h
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-2 col-half-offset">
+            <div class="Thursday">
+              <strong> THURS </strong>
+              <br />
+              🌩
+              <br />
+              <div class="thurs-weather">
+                15°C/23°C
+              </div>
+              <div class="Thursday-paragraph">
+                Precipitation: 20% <br />
+                Humidity: 70% <br />
+                Wind: 12 km/h
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-2 col-half-offset">
+            <div class="Friday">
+              <strong> FRI </strong>
+              <br />
+              🌨
+              <br />
+              <div class="fri-weather">
+                -7°C/12°C
+              </div>
+              <div class="Friday-paragraph">
+                Precipitation: 0% <br />
+                Humidity: 0% <br />
+                Wind: 15 km/h
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
