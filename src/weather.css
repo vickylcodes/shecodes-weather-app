@@ -1,0 +1,128 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  .container {
+    width: 100%;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  input {
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+    color: #48c9b0;
+    line-height: 2px;
+    border-radius: 30px;
+  }
+  
+  input::placeholder {
+    font-size: 13px;
+  }
+  
+  h1 {
+    font-weight: 900;
+    color: #f1948a;
+  }
+  
+  h1:hover {
+    color: #86a8e7;
+  }
+  img {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-weight: 500;
+    color: #fa8072;
+  }
+  
+  h3 {
+    font-weight: 200;
+    color: #f08080;
+    line-height: normal;
+  }
+  
+  h4 {
+    font-size: 18px;
+    color: #48c9b0;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    line-height: 2.5;
+  }
+  
+  h5 {
+    color: #76d7c4;
+    line-height: normal;
+  }
+  h6 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ff5733;
+  }
+  p {
+    font-weight: thin;
+    color: #76d7c4;
+    line-height: normal;
+  }
+  
+  section {
+    margin-left: 15%;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .Monday {
+    color: #e74c3c;
+  }
+  
+  .Monday:hover,
+  .Tuesday:hover,
+  .Wednesday:hover,
+  .Thursday:hover,
+  .Friday:hover {
+    color: #34495e;
+    transition: all 250ms ease-in-out;
+  }
+  
+  .Tuesday {
+    color: #f39c12;
+  }
+  .Wednesday {
+    color: #2ecc71;
+  }
+  
+  .Thursday {
+    color: #5dade2;
+  }
+  
+  .Friday {
+    color: #bb8fce;
+  }
+  
+  .mon-weather,
+  .tues-weather,
+  .wed-weather,
+  .thurs-weather,
+  .fri-weather {
+    font-size: 15px;
+  }
+  
+  .Monday-paragraph,
+  .Tuesday-paragraph,
+  .Wednesday-paragraph,
+  .Thursday-paragraph,
+  .Friday-paragraph {
+    font-size: 12px;
+    margin: 2%;
+  }
+  
