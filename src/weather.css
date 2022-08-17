@@ -126,3 +126,7 @@ body {
     margin: 2%;
   }
   
+  #gitHub {
+    margin-top: 20px;
+    font-weight: bold;
+  }
