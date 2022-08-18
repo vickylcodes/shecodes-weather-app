@@ -1,5 +1,5 @@
 .weather-app-io{
-  max-width: 800px;
+  max-width: 75%;
   margin: 0 auto;
 }
 
@@ -29,10 +29,11 @@ body {
   }
   
   input::placeholder {
-    font-size: 13px;
+    font-size: 8pt;
   }
   
   h1 {
+    font-size: 20pt;
     font-weight: 900;
     color: #f1948a;
   }
@@ -47,26 +48,29 @@ body {
   }
   
   h2 {
+    font-size: 15pt;
     font-weight: 500;
     color: #fa8072;
   }
   
   h3 {
+    font-size: 12pt;
     font-weight: 200;
     color: #f08080;
     line-height: normal;
   }
   
   h4 {
-    font-size: 18px;
-    color: #48c9b0;
+    font-size: 12pt;
+    color: #76d7c4;
     margin-top: 24px;
     margin-bottom: 16px;
     line-height: 2.5;
   }
   
   h5 {
-    color: #76d7c4;
+    font-size: 18pt;
+    color: #8ac2f7;
     line-height: normal;
   }
   h6 {
@@ -134,4 +138,5 @@ body {
   #gitHub {
     margin-top: 20px;
     font-weight: bold;
+    color: #f1948a;;
   }
