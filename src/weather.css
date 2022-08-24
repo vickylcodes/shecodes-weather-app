@@ -111,7 +111,7 @@ section {
 .Wednesday:hover,
 .Thursday:hover,
 .Friday:hover {
-  color: #34495e;
+  color: #d9dfe6;
   transition: all 250ms ease-in-out;
 }
 
@@ -135,7 +135,7 @@ section {
 .wed-weather,
 .thurs-weather,
 .fri-weather {
-  font-size: 15px;
+  font-size: 12px;
   margin-bottom: 20%;
 }
 
@@ -144,7 +144,7 @@ section {
 .Wednesday-paragraph,
 .Thursday-paragraph,
 .Friday-paragraph {
-  font-size: 12px;
+  font-size: 10px;
   margin: -5%;
 }
 
