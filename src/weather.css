@@ -75,8 +75,8 @@ h4 {
 }
 
 h5 {
-  font-size: 18pt;
-  color: #8ac2f7;
+  font-size: 16pt;
+  color: #23527c;
   line-height: normal;
 }
 h6 {
@@ -130,6 +130,7 @@ section {
 .thurs-weather,
 .fri-weather {
   font-size: 15px;
+  margin-bottom: 20%;
 }
 
 .Monday-paragraph,
@@ -138,7 +139,7 @@ section {
 .Thursday-paragraph,
 .Friday-paragraph {
   font-size: 12px;
-  margin: 2%;
+  margin: -5%;
 }
 
 #gitHub {
