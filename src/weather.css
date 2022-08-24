@@ -137,6 +137,7 @@ section {
 .fri-weather {
   font-size: 12px;
   margin-bottom: 20%;
+  text-align: center;
 }
 
 .Monday-paragraph,
@@ -146,6 +147,7 @@ section {
 .Friday-paragraph {
   font-size: 10px;
   margin: -5%;
+  text-align: center;
 }
 
 #gitHub {
