@@ -19,7 +19,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 
 let months = [
@@ -34,7 +34,7 @@ let months = [
   "September",
   "October",
   "November",
-  "December"
+  "December",
 ];
 
 h3.innerHTML = `${days[currentTime.getDay()]}, ${currentTime.getDate()} ${
@@ -109,14 +109,17 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 function showTemperature(response) {
-  console.log(response.data.coord.lat);
-  console.log(response.data.coord.lon);
-  console.log(response.data.main.temp);
-
   let temperature = Math.round(response.data.main.temp);
   let place = response.data.name;
   let h2 = document.querySelector("h2");
   h2.innerHTML = `It is currently ${temperature}°C in ${place}!`;
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showPosition(position) {
