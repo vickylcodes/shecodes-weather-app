@@ -96,7 +96,8 @@ p {
 }
 
 section {
-  margin-left: 15%;
+  margin-left: 3%;
+  margin-right: -20%;
   font-size: 20px;
   text-align: center;
 }
