@@ -38,10 +38,8 @@
           22 JULY 2022 / 2.22PM AEST
         </h3>
         <h4>
-          What is today's temperature in
+          What is the temperature in
           <form id="search-form" class="search-form">
-            <div class="row">
-              <div class="col-sm">
                 <input
                   type="search"
                   placeholder="insert city..."
@@ -50,42 +48,28 @@
                   autocomplete="off"
                   id="city-input"
                 />?
-              </div>
-              <div class="col-sm">
-                  <button
+                <button
                         type="submit"
                         value="search"
                         class="btn btn-info"
                         id="search-button"
                   >submit
                   </button>
-              </div>
-
-              <div class="col-sm">
-                  <button
-                        type="submit"
-                        value="current"
-                        class="btn btn-dark"
-                        id="current-location-button"
-                  >current
-                  </button>
-              </div>
-            </div>
         </h4>
-      <img 
-                            src="" 
-                            alt="Rainy"
-                            id="icon"
-                            />
+         
         <h5>It is 
           <span class="temperature" id="temperature"> 16 </span>
           <span class="units">
               <a href="#" id="celsius-link">°C</a> |
               <a href="#" id="fahrenheit-link">°F</a>   
-          in <span id="city"> Sydney </span>!
+          in <span id="city"></span>!
     <br> 
     <span id="description"></span>
-      
+    <img 
+    src="" 
+    alt="" 
+    id="icon" 
+    />
     <br />
     
   </h5>

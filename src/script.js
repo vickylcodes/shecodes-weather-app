@@ -108,7 +108,7 @@ farenheitLink.addEventListener("click", convertToFarenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-function showTemperature(response) {
+function displayTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let place = response.data.name;
   let h2 = document.querySelector("h2");
@@ -117,15 +117,12 @@ function showTemperature(response) {
 
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showPosition(position) {
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
-
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let units = "metric";
@@ -133,12 +130,9 @@ function showPosition(position) {
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl = `${apiEndpoint}?&lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
 
-  axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(displayTemperature);
 }
 
 navigator.geolocation.getCurrentPosition(showPosition);
-
-let currentLocationButton = document.querySelector(`#current-location-button`);
-currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New York");

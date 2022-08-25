@@ -26,16 +26,6 @@ input {
   border-radius: 28px;
 }
 
-input::placeholder {
-  font-size: 10pt;
-}
-
-#city-input {
-  display: block;
-  margin: 0 auto;
-  width: 3cm;
-}
-
 h1 {
   font-size: 20pt;
   font-weight: 900;
@@ -148,6 +138,28 @@ section {
   font-size: 10px;
   margin: -5%;
   text-align: center;
+}
+
+input::placeholder {
+  font-size: 10pt;
+}
+
+#city-input {
+  display: inline;
+  margin: 0 auto;
+  width: 3cm;
+  margin-right: 0.5em;
+}
+
+#search-button {
+  display: inline;
+}
+#icon {
+  display: inline;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  height: auto;
 }
 
 #gitHub {
