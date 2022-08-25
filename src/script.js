@@ -1,16 +1,15 @@
-//Feature #1
 let currentTime = new Date();
 
 let h3 = document.querySelector("h3");
 
 let date = currentTime.getDate();
 
-currentTime.getMinutes(); // 0,1,2, 12
-currentTime.getHours(); //1, 2, 3, 4
-currentTime.getDate(); //1, 2, 3, 4
-currentTime.getDay(); // 0, 1, 2
-currentTime.getMonth(); // 0, 1, 2
-currentTime.getFullYear(); // 2021
+currentTime.getMinutes();
+currentTime.getHours();
+currentTime.getDate();
+currentTime.getDay();
+currentTime.getMonth();
+currentTime.getFullYear();
 
 let days = [
   "Sunday",
@@ -40,8 +39,6 @@ let months = [
 h3.innerHTML = `${days[currentTime.getDay()]}, ${currentTime.getDate()} ${
   months[currentTime.getMonth()]
 } ${currentTime.getFullYear()} / ${currentTime.getHours()}:${currentTime.getMinutes()}`;
-
-//Feature #2
 
 function displayWeatherCondition(response) {
   console.log(response.data);
@@ -84,35 +81,29 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function convertToFarenheit(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 68;
+
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-function convertToCelsius(event) {
+function displayCelsiusTemperature(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 20;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let cityForm = document.querySelector("#search-form");
-
-cityForm.addEventListener("submit", handleSubmit);
-
-//Bonus Feature
-
-let farenheitLink = document.querySelector("#fahrenheit-link");
-farenheitLink.addEventListener("click", convertToFarenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
-function displayTemperature(response) {
+function displayCelsiusTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  let place = response.data.name;
+  let cityElement = response.data.name;
   let h2 = document.querySelector("h2");
-  h2.innerHTML = `It is currently ${temperature}°C in ${place}!`;
+  h2.innerHTML = `It is currently ${temperature}°C in ${cityElement}!`;
   let iconElement = document.querySelector("#icon");
 
   iconElement.setAttribute(
@@ -130,9 +121,21 @@ function showPosition(position) {
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl = `${apiEndpoint}?&lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
 
-  axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayCelsiusTemperature);
 }
 
 navigator.geolocation.getCurrentPosition(showPosition);
+
+let celsiusTemperature = null;
+
+let cityForm = document.querySelector("#search-form");
+
+cityForm.addEventListener("submit", handleSubmit);
+
+let farenheitLink = document.querySelector("#fahrenheit-link");
+farenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("New York");
