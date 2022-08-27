@@ -167,3 +167,21 @@ input::placeholder {
   font-weight: bold;
   color: #f1948a;
 }
+
+#celsius-link,
+#fahrenheit-link,
+#celsius-link:hover,
+#fahrenheit-link:hover {
+  text-decoration: none;
+}
+
+h5 .temperature .units .active {
+color: rgb(33, 33, 33);
+cursor: default;
+}
+
+h5 .temperature .units .active:hover {
+  text-decoration: none;
+  }
+
+  
