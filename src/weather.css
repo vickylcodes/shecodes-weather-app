@@ -132,15 +132,24 @@ section {
   text-align: center;
 }
 
-.Monday {
+.weather-forecast-date {
   color: #e74c3c;
 }
 
-.Monday:hover,
+#mon-icon,
+#tues-icon {
+  display: inline;
+  margin-top: -26px;
+  margin-bottom: -19px;
+  width: 64px;
+}
+
+.weather-forecast-date:hover,
 .Tuesday:hover,
 .Wednesday:hover,
 .Thursday:hover,
 .Friday:hover {
+  cursor: grab;
   color: #d9dfe6;
   transition: all 250ms ease-in-out;
 }
@@ -160,7 +169,7 @@ section {
   color: #bb8fce;
 }
 
-.mon-weather,
+.weather-forecast-temperatures,
 .tues-weather,
 .wed-weather,
 .thurs-weather,
