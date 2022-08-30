@@ -21,7 +21,6 @@
 h1,
 h2,
 h3,
-h4,
 h5,
 h6,
 input {
@@ -61,6 +60,8 @@ h3 {
 }
 
 h4 {
+  font-family: "FS Albert Extra Bold", Helvetica, Arial, sans-serif;
+  text-align: center;
   font-size: 12pt;
   color: #23527c;
   margin-top: 24px;
@@ -175,6 +176,7 @@ section {
 }
 
 input::placeholder {
+  font-family: "FS Albert Extra Bold", Helvetica, Arial, sans-serif;
   font-size: 7.5pt;
 }
 
@@ -186,7 +188,8 @@ input::placeholder {
 }
 
 #search-button {
-  font-size: 78%;
+  font-weight: bold;
+  font-size: 65%;
   display: inline;
 }
 
