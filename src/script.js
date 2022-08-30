@@ -40,7 +40,8 @@ h3.innerHTML = `${days[currentTime.getDay()]}, ${currentTime.getDate()} ${
   months[currentTime.getMonth()]
 } ${currentTime.getFullYear()} / ${hours}:${minutes}`;
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["MON", "TUES", "WED", "THURS", "FRI", "SAT"];
@@ -94,6 +95,13 @@ function showPosition(position) {
 
 navigator.geolocation.getCurrentPosition(showPosition);
 
+function getForecast(coordinates) {
+  let apiKey = "91976109f2a91771f09b69d01c0d52a3";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeatherCondition(response) {
   document.querySelector(`#city`).innerHTML = response.data.name;
   document.querySelector(`#temperature`).innerHTML = Math.round(
@@ -116,6 +124,8 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -134,7 +144,7 @@ function handleSubmit(event) {
 function searchLocation(position) {
   let apiKey = "91976109f2a91771f09b69d01c0d52a3";
   let units = "metric";
-  let apiUrl = `https://api.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.org/data/2.5/weather?lat=${position.coords.lat}&lon=${position.coords.lon}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(displayWeatherCondition);
 }
@@ -180,4 +190,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("New York");
-displayForecast();
