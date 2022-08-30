@@ -126,8 +126,6 @@ h6 {
 }
 
 section {
-  margin-left: 3%;
-  margin-right: -20%;
   font-size: 20px;
   text-align: center;
 }
@@ -136,22 +134,17 @@ section {
   color: #e74c3c;
 }
 
-#mon-icon,
-#tues-icon {
+#forecast-icon {
   display: inline;
   margin-top: -26px;
   margin-bottom: -19px;
   width: 64px;
 }
 
-.weather-forecast-date:hover,
-.Tuesday:hover,
-.Wednesday:hover,
-.Thursday:hover,
-.Friday:hover {
+.weather-forecast-date:hover {
   cursor: grab;
-  color: #d9dfe6;
-  transition: all 250ms ease-in-out;
+  color: #f1f8ff;
+  transition: all 380ms ease-in-out;
 }
 
 .Tuesday {
@@ -169,21 +162,13 @@ section {
   color: #bb8fce;
 }
 
-.weather-forecast-temperatures,
-.tues-weather,
-.wed-weather,
-.thurs-weather,
-.fri-weather {
+.weather-forecast-temperatures {
   font-size: 12px;
   margin-bottom: 20%;
   text-align: center;
 }
 
-.Monday-paragraph,
-.Tuesday-paragraph,
-.Wednesday-paragraph,
-.Thursday-paragraph,
-.Friday-paragraph {
+.atmosphere-paragraph {
   font-size: 10px;
   margin: -5%;
   text-align: center;
