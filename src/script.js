@@ -78,7 +78,6 @@ function displayForecast(response) {
                   ${Math.round(forecastDay.temp.min)}°C </span>
                 </div>
                 <div class="atmosphere-paragraph">
-                  Precipitation: 0% <br />
                   Humidity: 60% <br />
                   Wind: 8 km/h
                 </div>
@@ -109,7 +108,6 @@ navigator.geolocation.getCurrentPosition(showPosition);
 function getForecast(coordinates) {
   let apiKey = "91976109f2a91771f09b69d01c0d52a3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -137,6 +135,7 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
+  console.log(response.data);
 }
 
 function searchCity(city) {
